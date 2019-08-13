@@ -5,12 +5,18 @@
   height: 100px;
 }
 
-.nav-album-button {
+.nav-album-button,
+.desktop-button {
   margin: 0 10px 0 10px;
+  border-width: 0;
+  cursor: pointer;
+}
+
+.desktop-button {
+  font-size: 20px;
 }
 
 /* MOBILE */
-
 .img-mobile {
   width: 100%;
 }

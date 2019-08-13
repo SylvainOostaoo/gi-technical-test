@@ -15,7 +15,7 @@ function NavAlbum({
         disabled={currentAlbum === 0 ? true : false}
         class="nav-album-button"
       >
-        -
+        &larr;
       </button>
       <div>Album "{albumName}"</div>
       <button
@@ -23,7 +23,7 @@ function NavAlbum({
         disabled={currentAlbum === albums.length - 1 ? true : false}
         class="nav-album-button"
       >
-        +
+        &rarr;
       </button>
     </nav>
   );
