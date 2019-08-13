@@ -32,7 +32,7 @@ class App extends Component {
           alignItems: "center"
         }}
       >
-        {/* album - nav */}
+        {/* albums navigation */}
         <NavAlbum
           albums={albums}
           currentAlbum={currentAlbum}
@@ -40,7 +40,7 @@ class App extends Component {
           nextAlbum={this.nextAlbum}
           albumName={albums[currentAlbum][0].albumId}
         />
-        {/* mobile - only */}
+        {/* mobile version */}
         <div class="mobile-only">
           <MobileScreen
             albums={albums}
@@ -49,7 +49,7 @@ class App extends Component {
             handleChangePage={this.handleChangePage}
           />
         </div>
-        {/* desktop - only */}
+        {/* desktop version */}
         <div class="desktop-only">
           <DesktopScreen
             albums={albums}
