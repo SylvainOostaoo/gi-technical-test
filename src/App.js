@@ -1,8 +1,9 @@
-import "./App.css";
-
 import { h, Component } from "preact";
 /** @jsx h */
+
 import axios from "axios";
+import NavAlbum from "./containers/NavAlbum";
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -58,27 +59,20 @@ class App extends Component {
     return (
       <div>
         {/* album - nav */}
-        <nav style={{ display: "flex" }}>
-          <button
-            onClick={this.previousAlbum}
-            disabled={currentAlbum === 0 ? true : false}
-          >
-            -
-          </button>
-          <div>Album "{albums[currentAlbum][0].albumId}"</div>
-          <button
-            onClick={this.nextAlbum}
-            disabled={currentAlbum === albums.length - 1 ? true : false}
-          >
-            +
-          </button>
-        </nav>
+        <NavAlbum
+          previousDisabled={currentAlbum === 0 ? true : false}
+          nextDisabled={currentAlbum === albums.length - 1 ? true : false}
+          previousAlbum={this.previousAlbum}
+          nextAlbum={this.nextAlbum}
+          albumName={albums[currentAlbum][0].albumId}
+        />
         {/* mobile - only */}
         <div class="mobile-only">
           <ul class="pagination">{renderPageNumbers}</ul>
           {photos.map(photo => (
             <img src={photo.thumbnailUrl} alt={photo.title} />
           ))}
+          <ul class="pagination">{renderPageNumbers}</ul>
         </div>
         {/* desktop - only */}
         <div class="desktop-only">
