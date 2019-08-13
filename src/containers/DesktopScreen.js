@@ -9,7 +9,7 @@ function DesktopScreen({
   nextPhoto
 }) {
   return (
-    <div>
+    <div style={{ display: "flex", width: "100%" }}>
       <button
         onClick={previousPhoto}
         disabled={currentPhoto === 0 ? true : false}
@@ -19,6 +19,7 @@ function DesktopScreen({
       <img
         src={albums[currentAlbum][currentPhoto].url}
         alt={albums[currentAlbum][currentPhoto].title}
+        style={{ objectFit: "cover" }}
       />
       <button
         onClick={nextPhoto}

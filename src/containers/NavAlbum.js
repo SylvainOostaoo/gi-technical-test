@@ -9,10 +9,11 @@ function NavAlbum({
   albumName
 }) {
   return (
-    <nav style={{ display: "flex" }}>
+    <nav class="nav-album">
       <button
         onClick={() => previousAlbum()}
         disabled={currentAlbum === 0 ? true : false}
+        class="nav-album-button"
       >
         -
       </button>
@@ -20,6 +21,7 @@ function NavAlbum({
       <button
         onClick={() => nextAlbum()}
         disabled={currentAlbum === albums.length - 1 ? true : false}
+        class="nav-album-button"
       >
         +
       </button>

@@ -1,6 +1,26 @@
+/* NAV ALBUM */
+.nav-album {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.nav-album-button {
+  margin: 0 10px 0 10px;
+}
+
+/* MOBILE */
+
+.img-mobile {
+  width: 100%;
+}
+
+/* MOBILE : PAGINATION */
 .pagination {
-  display: "flex";
-  justify-content: "center";
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  line-height: 50px;
   color: green;
 }
 
@@ -24,16 +44,3 @@
     display: none;
   }
 }
-/* 
-.example {
-  .mobile-only {
-    @media (min-width: 768px) {
-      display: none;
-    }
-  }
-  .desktop-only {
-    @media (max-width: 767px) {
-      display: none;
-    }
-  }
-} */

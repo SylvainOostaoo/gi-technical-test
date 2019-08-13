@@ -25,7 +25,13 @@ class App extends Component {
     if (albums.length === 0) return <div>Fetching datas...</div>;
 
     return (
-      <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center"
+        }}
+      >
         {/* album - nav */}
         <NavAlbum
           albums={albums}
@@ -77,9 +83,6 @@ class App extends Component {
   }
 
   previousPhoto = () => {
-    //
-    // !!!!! En Preact, on peut récupérer le state autrement ici ?
-    //
     if (this.state.currentPhoto > 0)
       this.setState(prevState => ({
         currentPhoto: prevState.currentPhoto - 1

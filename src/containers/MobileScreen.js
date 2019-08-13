@@ -23,7 +23,7 @@ function MobileScreen({ albums, currentAlbum, currentPage, handleChangePage }) {
         handleChangePage={handleChangePage}
       />
       {photos.map(photo => (
-        <img src={photo.url} alt={photo.title} />
+        <img src={photo.url} alt={photo.title} class="img-mobile" />
       ))}
       <Pagination
         albums={albums}
