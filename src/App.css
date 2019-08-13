@@ -8,11 +8,6 @@
   margin: 0px 5px 0px 5px;
   cursor: pointer;
 }
-/* 
-.page-number:hover {
-  text-decoration: underline;
-  color: green;
-} */
 
 .current-page {
   color: rgb(197, 36, 36);
